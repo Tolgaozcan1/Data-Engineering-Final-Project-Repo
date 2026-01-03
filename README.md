@@ -124,7 +124,7 @@ Finding: Disaster-specific models offer minimal improvement (+0.1%). Universal m
 
 ## Global distribution of High Priority Disasters Web Link
 
-https://tolgaozcan1.github.io/WS25-DE03-Data-Engineering-Final-Project-Repo/Priority_Disasters_world_map.html
+https://tolgaozcan1.github.io/WS25-DE03-Data-Engineering-Final-Project-Repo/priority_disasters_world_map.html
 
 
 ## Detailed Setup
