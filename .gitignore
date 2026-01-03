@@ -1,0 +1,9 @@
+*.csv
+*.gpkg
+*.xlsxl
+*.zip
+data/
+Figures_and_Tables/
+__pycache__/
+*.pyc
+.DS_Store
