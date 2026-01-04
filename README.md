@@ -161,16 +161,16 @@ Running Individual Modules
 bash
 ## Run specific stages
 ```
-python src/data_ingestion.py              # Load data
-python src/data_cleaning.py               # Clean data
-python src/data_integration.py            # Merge datasets
-python src/feature_engineering.py         # Create features
-python src/model_training.py              # Train models
-python src/disaster_specific_models.py    # Type-specific analysis
-python src/create_detailed_tables.py      # Generate operational tables
+python src/data_ingestion.py              # Stage 1: Load raw data
+python src/data_cleaning.py               # Stage 2: Clean & preprocess
+python src/data_integration.py            # Stage 3: Merge datasets
+python src/feature_engineering.py         # Stage 4: Create ML features
+python src/model_training.py              # Stage 5: Train/evaluate models
+python src/creating_figures_tables.py     # Stage 6: Generate visualizations
+python src/create_detailed_tables.py      # Stage 7: Generate analysis tables
 ```
 
-## Create all required figures and tables
+## Create required figures and tables
 python src/generate_figures_tables.py
 
 ## Create detailed analytical tables
@@ -207,9 +207,11 @@ airflow webserver --port 8080 &      # Terminal 1
 airflow scheduler &                   # Terminal 2
 
 4. Trigger DAG
-airflow dags trigger disaster_relief_pipeline
+airflow dags trigger disaster_relief_pipeline.py
 DAG Access
 Web UI: http://localhost:8080
+User name: admin
+password: admin
 ```
 
 ## Operational Insights
@@ -402,27 +404,6 @@ Academic research on disaster optimization
 
 **Validation**: Peer-reviewed methodology from data science literature
 
-## Contributing
-Development Workflow
-Fork the repository
-
-Create a feature branch (git checkout -b feature/improvement)
-
-Commit changes (git commit -m 'Add some feature')
-
-Push to branch (git push origin feature/improvement)
-
-Open a Pull Request
-
-Code Standards
-Follow PEP 8 style guide
-
-Include docstrings for all functions
-
-Write unit tests for new features
-
-Update documentation accordingly
-
 
 ## License
 
@@ -444,9 +425,5 @@ World Bank for population and development indicators
 
 <!-- trigger pages -->
 
-
-Instructors for guidance and feedback
-
-Open-source community for invaluable tools and libraries
 
 
