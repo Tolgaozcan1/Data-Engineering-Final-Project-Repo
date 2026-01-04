@@ -125,7 +125,7 @@ Finding: ISO + Year merge achieves 93.4% match rate (24,617 of 26,368 disasters)
 
 **RQ2**: ML vs Traditional Methods
 Question: Do ML models outperform traditional methods for disaster priority classification?
-Finding: Traditional rule-based methods (91.1%) outperform ML (88.4%) due to extreme class imbalance (95% Low priority disasters).
+Finding: Traditional rule-based methods (91.1%) outperform ML (88.4%) due to extreme class imbalance (95% low-priority disasters).
 
 **Output**: data/outputs/RQ2_Fig1.pdf (Model comparison) | RQ2_Table1.xlsx (Performance metrics)
 
@@ -136,7 +136,7 @@ Finding: Top 5 predictive features (Random Forest importance)
 **Output**: data/outputs/RQ3_Fig1.pdf (Feature importance plot) |
 
 **RQ4**: Disaster-Specific Models
-Question: Should we use different models for different disaster types?
+Question: Should we use different models for different types of disasters?
 Finding: Disaster-specific models offer minimal improvement (+0.1%). The universal model (95.4% accuracy) is sufficient for operational deployment.
 
 **Output**: data/outputs/RQ4_Fig1.pdf (Comparison chart) | RQ4_Table1.xlsx (Accuracy by type)
@@ -159,6 +159,8 @@ pip install -r requirements.txt
 python -c "import pandas; import sklearn; print('All packages installed successfully!')"
 Running Individual Modules
 bash
+```
+
 ## Run specific stages
 ```
 python src/data_ingestion.py              # Stage 1: Load raw data
@@ -169,7 +171,7 @@ python src/model_training.py              # Stage 5: Train/evaluate models
 python src/creating_figures_tables.py     # Stage 6: Generate visualizations
 python src/create_detailed_tables.py      # Stage 7: Generate analysis tables
 ```
-
+```
 ## Create required figures and tables
 python src/generate_figures_tables.py
 
@@ -179,6 +181,7 @@ python src/create_detailed_tables.py
 ## Results will be in:
 #- data/outputs/              # RQ figures & tables
 #- Figures_and_Tables.zip     # Submission package
+```
 
 ## Airflow DAG Orchestration
 DAG Overview
