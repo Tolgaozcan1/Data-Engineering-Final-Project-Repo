@@ -78,25 +78,44 @@ Expected Output:
 ## Project Architecture
 ```
 text
-Data-Engineering-Final-Project-Repo/
-├── 📊 data/                    # Data lifecycle
-│   ├── raw/                   # Original datasets (EM-DAT + World Bank)
-│   ├── processed/             # Cleaned, merged, feature-engineered data
-│   └── outputs/               # Final results & visualizations
-├── 🔧 src/                    # Core pipeline modules
-│   ├── data_ingestion.py      # Stage 1: Load raw data
-│   ├── data_cleaning.py       # Stage 2: Clean & preprocess
-│   ├── data_integration.py    # Stage 3: Merge datasets (93.4% match)
-│   ├── feature_engineering.py # Stage 4: Create ML features
-│   ├── model_training.py      # Stage 5: Train/evaluate models
-│   ├── disaster_specific_models.py # Stage 6: Type-specific analysis
-│   └── run_pipeline.py        # Main orchestrator
-├── ☁️ airflow/                # Production orchestration
-│   └── dags/
-│       └── disaster_pipeline.py # 7-task Airflow DAG
-├── 📄 README.md               # This documentation
-└── 📋 requirements.txt        # Python dependencies
-```
+WS25-DE03-Data-Engineering-Final-Project-Repo/
+├── 📁 Figures_and_Tables/      # Analysis outputs and visualizations
+│   ├── 📁 Figures/              # Visual outputs (charts, maps, diagrams)
+│   │   ├── Fig-Airflow_Disaster_releif_pipeline.pdf  # Apache Airflow workflow orchestration visualization
+│   │   ├── RQ1_Fig1.pdf         # Research Question 1 visualization
+│   │   ├── RQ2_Fig1.pdf         # Research Question 2 visualization
+│   │   ├── RQ3_Fig1.pdf         # Research Question 3 visualization
+│   │   ├── RQ4_Fig1.pdf         # Research Question 4 visualization
+│   │   ├── priority_disasters_real_map.pdf # Distribution of Disasters scale regarding countries
+│   │   ├── priority_disasters_world_map.pdf # High Priority Disasters
+│   │   ├── rq3_feature_importance.pdf # Top priority features
+│   │  
+│   └── 📁 Tables/               # Data tables and statistical outputs
+│       ├── Country_Response_Recommendations.xlsx
+│       ├── Disaster_Type_Impact_Analysis.xlsx
+│       ├── Seasonal_Disaster_Patterns.xlsx
+│       ├── Top10_Vulnerable_Countries.xlsx
+│       ├── country_disaster_totals.csv
+│       └── country_priority_statistics.csv
+│
+├── 📁 dags/                     # Apache Airflow workflow orchestration
+│   └── disaster_project_pipeline.py  # 7-stage automated ETL pipeline
+│
+├── 📁 src/                      # Core pipeline modules (Python scripts)
+│   ├── create_detailed_tables.py     # Generate analysis tables
+│   ├── creating_figures_tables.py    # Generate visualizations
+│   ├── data_cleaning.py              # Stage 2: Data preprocessing
+│   ├── data_ingestion.py             # Stage 1: Load raw datasets
+│   ├── data_integration.py           # Stage 3: Merge EM-DAT + World Bank data
+│   ├── feature_engineering.py        # Stage 4: Create ML features
+│   ├── model_training.py             # Stage 5: Train/evaluate models
+│   └── run_pipeline.py               # Main orchestrator script
+│
+├── 📄 .gitignore                # Git exclusion rules (ignores data/, *.csv, etc.)
+├── 📄 LICENSE.md                # Project license
+├── 📄 README.md                 # Project documentation
+├── 📄 Requirements.txt          # Python dependencies
+└── 📄 priority_disasters_world_map.html  # Interactive disaster map
 ## Research Questions & Findings
 **RQ1**: Data Integration Methodology
 Question: What methodology achieves optimal data completeness when merging disaster and population data?
