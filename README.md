@@ -115,6 +115,7 @@ WS25-DE03-Data-Engineering-Final-Project-Repo/
 ├── 📄 README.md                 # Project documentation
 ├── 📄 Requirements.txt          # Python dependencies
 └── 📄 priority_disasters_world_map.html  # Interactive disaster map
+```
 ## Research Questions & Findings
 **RQ1**: Data Integration Methodology
 Question: What methodology achieves optimal data completeness when merging disaster and population data?
@@ -158,7 +159,7 @@ pip install -r requirements.txt
 python -c "import pandas; import sklearn; print('All packages installed successfully!')"
 Running Individual Modules
 bash
-```
+
 
 ## Run specific stages
 ```
