@@ -91,12 +91,12 @@ WS25-DE03-Data-Engineering-Final-Project-Repo/
 │   │   ├── rq3_feature_importance.pdf # Top priority features
 │   │  
 │   └── 📁 Tables/               # Data tables and statistical outputs
-│       ├── Country_Response_Recommendations.xlsx
-│       ├── Disaster_Type_Impact_Analysis.xlsx
-│       ├── Seasonal_Disaster_Patterns.xlsx
-│       ├── Top10_Vulnerable_Countries.xlsx
-│       ├── country_disaster_totals.csv
-│       └── country_priority_statistics.csv
+│       ├── Country_Response_Recommendations.xlsx # Critical high-priority countries
+│       ├── Disaster_Type_Impact_Analysis.xlsx # Most Affecting Disasters and their effects
+│       ├── Seasonal_Disaster_Patterns.xlsx # Disaster pattern by Seasons 
+│       ├── Top10_Vulnerable_Countries.xlsx # Vulnerable countries regarding risk score and casualties
+│       ├── country_disaster_totals.csv  #  Total damage by disasters to the countries
+│       └── country_priority_statistics.csv # Countries' statistics of vulnerability
 │
 ├── 📁 dags/                     # Apache Airflow workflow orchestration
 │   └── disaster_project_pipeline.py  # 7-stage automated ETL pipeline
@@ -137,7 +137,7 @@ Finding: Top 5 predictive features (Random Forest importance)
 
 **RQ4**: Disaster-Specific Models
 Question: Should we use different models for different disaster types?
-Finding: Disaster-specific models offer minimal improvement (+0.1%). Universal model (95.4% accuracy) is sufficient for operational deployment.
+Finding: Disaster-specific models offer minimal improvement (+0.1%). The universal model (95.4% accuracy) is sufficient for operational deployment.
 
 **Output**: data/outputs/RQ4_Fig1.pdf (Comparison chart) | RQ4_Table1.xlsx (Accuracy by type)
 
